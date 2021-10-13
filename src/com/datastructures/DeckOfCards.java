@@ -6,7 +6,6 @@ package com.datastructures;
 import java.util.Scanner;
 public class DeckOfCards {
     int i,j,k;
-    StringBuffer sb=new StringBuffer();
 
     //Showing the initilizing
     public void start(){
@@ -22,7 +21,15 @@ public class DeckOfCards {
             }
         }
     }
-    
+    //performing random function
+    public void unique(){
+        String cards="Clubs"+"Diamonds"+"Hearts"+"Spades";
+        for(k=0;k<13;k++) {
+            int ch = (int) (cards.length() * Math.random());
+            System.out.println(cards.charAt(ch));
+        }
+    }
+
     public static void main(String[] args) {
         DeckOfCards dc=new  DeckOfCards();
         dc.start();
